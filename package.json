@@ -1,0 +1,24 @@
+{
+  "name": "semantic-release-zero",
+  "version": "0.0.0-development",
+  "main": "index.js",
+  "repository": "https://github.com/zero-config/semantic-release-zero.git",
+  "author": "Victor Wang <wang_shaojie@icloud.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "eslint ./index.js",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-plugin-zero": "^0.0.9",
+    "semantic-release": "^15.13.19"
+  },
+  "peerDependencies": {
+    "semantic-release": "^15.13.19"
+  },
+  "dependencies": {
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/git": "^7.0.16"
+  }
+}

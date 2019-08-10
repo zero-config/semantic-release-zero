@@ -1,0 +1,24 @@
+language: node_js
+
+node_js:
+  - node
+
+# Trigger a push build on master and greenkeeper branches + PRs build on every branches
+# Avoid double build on PRs (See https://github.com/travis-ci/travis-ci/issues/1147)
+branches:
+  only:
+    - master
+    - /^greenkeeper.*$/
+
+install:
+  # Retry install on fail to avoid failing a build on network/disk/external errors
+  - yarn 
+
+script:
+  - yarn test
+
+jobs:
+  include:
+    - stage: release
+      script:
+        - yarn semantic-release
